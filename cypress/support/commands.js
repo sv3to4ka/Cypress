@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+const { default: locators } = require("../e2e/Task2_E-shop/Task2_MenuItems/locators");
+
+// 
+// Cypress.Commands.add('openComputersMenu', () => {
+//     cy.visit(locators.webShopMainPage);
+//     cy.contains('Computers').click();
+//   });
+  Cypress.Commands.add('openComputersMenu', () => {
+    cy.contains(locators.computersMenu).click();
+  });
+
+// Cypress.Commands.add('openComputersMenu', () => {
+//     cy.contains(locators.computersMenu).click();
+//   });
+  
+  
