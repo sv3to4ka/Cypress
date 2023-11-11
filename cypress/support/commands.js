@@ -35,8 +35,21 @@ const { default: locators } = require("../e2e/Task2_E-shop/Task2_MenuItems/locat
     cy.contains(locators.computersMenu).click();
   });
 
-// Cypress.Commands.add('openComputersMenu', () => {
+Cypress.Commands.add('userLogin', () => {
 //     cy.contains(locators.computersMenu).click();
 //   });
+
+//   import locators from './locators';
+// describe('Add Item to Wishlist', () => {
+//     it('should allow add items to wishlist', () => {
+      cy.visit('https://demowebshop.tricentis.com');
+      cy.contains('Log in').click();
+      cy.get('#Email').type('shlynyanska+emcronin3@gmail.com');
+      cy.get('#Password').type('Password1!');
+      cy.get('.login-button').click();
+  
+      cy.wait(10000);
+
+    });
   
   
