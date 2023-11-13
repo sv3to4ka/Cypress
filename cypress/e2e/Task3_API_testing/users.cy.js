@@ -1,4 +1,4 @@
-//Task1
+//Task1: Verify that allows creating a User
 describe('API Test', () => {
   it('creates a user with array', () => {
     cy.request({
@@ -29,7 +29,7 @@ describe('API Test', () => {
   });
 });
 
-//Task2
+//Task2: Verify that allows login as a User
 describe('User Login Test', () => {
   it('log in a user using GET request and log the response', () => {
     const username = 'bdarling2@gmail.com';
@@ -50,7 +50,7 @@ describe('User Login Test', () => {
   });
 });
 
-//Task3
+//Task3: Verify that allows creating the list of Users
 describe('Create Users with List Test', () => {
   it('creats a list of users', () => {
     const usersList = [
@@ -113,7 +113,7 @@ describe('Create Users with List Test', () => {
   });
 });
 
-//Task4
+//Task4: Verify that allows Log out User
 describe('User Logout Test', () => {
   it('log out a user', () => {
     cy.request({
